@@ -2267,40 +2267,40 @@
     "ID": 283,
     "MatchDate": "17-03-2022",
     "HomeTeam": "Everton",
-    "HomeScore": "",
-    "AwayScore": "",
+    "HomeScore": "1",
+    "AwayScore": "0",
     "AwayTeam": "Newcastle"
   },
   {
     "ID": 284,
     "MatchDate": "18-03-2022",
     "HomeTeam": "Wolves",
-    "HomeScore": "",
-    "AwayScore": "",
+    "HomeScore": "2",
+    "AwayScore": "3",
     "AwayTeam": "Leeds"
   },
   {
     "ID": 285,
     "MatchDate": "19-03-2022",
     "HomeTeam": "Aston Villa",
-    "HomeScore": "",
-    "AwayScore": "",
+    "HomeScore": "0",
+    "AwayScore": "1",
     "AwayTeam": "Arsenal"
   },
   {
     "ID": 286,
     "MatchDate": "20-03-2022",
     "HomeTeam": "Leicester",
-    "HomeScore": "",
-    "AwayScore": "",
+    "HomeScore": "2",
+    "AwayScore": "1",
     "AwayTeam": "Brentford"
   },
   {
     "ID": 287,
     "MatchDate": "20-03-2022",
     "HomeTeam": "Spurs",
-    "HomeScore": "",
-    "AwayScore": "",
+    "HomeScore": "3",
+    "AwayScore": "1",
     "AwayTeam": "West Ham"
   },
   {
