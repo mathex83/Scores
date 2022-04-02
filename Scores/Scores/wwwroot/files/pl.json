@@ -2307,56 +2307,56 @@
     "ID": 288,
     "MatchDate": "02-04-2022",
     "HomeTeam": "Liverpool",
-    "HomeScore": "",
-    "AwayScore": "",
+    "HomeScore": "2",
+    "AwayScore": "0",
     "AwayTeam": "Watford"
   },
   {
     "ID": 289,
     "MatchDate": "02-04-2022",
     "HomeTeam": "Brighton",
-    "HomeScore": "",
-    "AwayScore": "",
+    "HomeScore": "0",
+    "AwayScore": "0",
     "AwayTeam": "Norwich"
   },
   {
     "ID": 290,
     "MatchDate": "02-04-2022",
     "HomeTeam": "Burnley",
-    "HomeScore": "",
-    "AwayScore": "",
+    "HomeScore": "0",
+    "AwayScore": "2",
     "AwayTeam": "Man City"
   },
   {
     "ID": 291,
     "MatchDate": "02-04-2022",
     "HomeTeam": "Chelsea",
-    "HomeScore": "",
-    "AwayScore": "",
+    "HomeScore": "1",
+    "AwayScore": "4",
     "AwayTeam": "Brentford"
   },
   {
     "ID": 292,
     "MatchDate": "02-04-2022",
     "HomeTeam": "Leeds",
-    "HomeScore": "",
-    "AwayScore": "",
+    "HomeScore": "1",
+    "AwayScore": "1",
     "AwayTeam": "Southampton"
   },
   {
     "ID": 293,
     "MatchDate": "02-04-2022",
     "HomeTeam": "Wolves",
-    "HomeScore": "",
-    "AwayScore": "",
+    "HomeScore": "2",
+    "AwayScore": "1",
     "AwayTeam": "Aston Villa"
   },
   {
     "ID": 294,
     "MatchDate": "02-04-2022",
     "HomeTeam": "Man Utd",
-    "HomeScore": "",
-    "AwayScore": "",
+    "HomeScore": "1",
+    "AwayScore": "1",
     "AwayTeam": "Leicester"
   },
   {
