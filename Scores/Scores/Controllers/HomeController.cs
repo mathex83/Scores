@@ -136,7 +136,7 @@ namespace Scores.Controllers
                     league = league.OrderByDescending(t => t.Points);
                     break;
                 case "ptMax":
-                    league = league.OrderBy((t) => t.MaxPoints);
+                    league = league.OrderBy(t => t.MaxPoints);
                     break;
                 case "ptMax_desc":
                     league = league.OrderByDescending((t) => t.MaxPoints);
