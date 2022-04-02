@@ -48,6 +48,9 @@
                  | 
             </th>
             <th>
+                Even
+            </th>
+            <th>
                 @Html.ActionLink(@Html.DisplayNameFor(model => model.MaxPoints), 
                 "LeagueView", new { sortOrder = ViewData["PtMax"] })
             </th>
@@ -92,6 +95,13 @@
             </td>
             <td>
                  | 
+            </td>
+            <td>
+                =@{
+                    int maxMatchesPlayed = Model.Max(t => t.Played);
+                    int evenOutPoints = (maxMatchesPlayed - item.Played) * 3 + item.Points;
+                    @evenOutPoints
+                }
             </td>
             <td>
                 =@Html.DisplayFor(modelItem => item.MaxPoints)
