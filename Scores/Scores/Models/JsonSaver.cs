@@ -7,9 +7,9 @@ namespace Scores.Models
 {
     public class JsonSaver
     {
-		readonly string filePath = @".\wwwroot\files\pl.json";
 		
-		public JsonSaver(List<Match> matches)
+		
+		public JsonSaver(List<Match> matches, string filePath)
 		{
 			if (matches.Count != 0)
 			{

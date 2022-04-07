@@ -5,10 +5,9 @@ using System.IO;
 namespace Scores.Models
 {
 	public class JsonLoader
-	{
-		readonly string filePath = @".\wwwroot\files\pl.json";
+	{		
 		public List<JsonMatch> Matches { get; set; }
-		public JsonLoader()
+		public JsonLoader(string filePath)
 		{
 			Matches = JsonConvert.DeserializeObject<List<JsonMatch>>(File.ReadAllText(filePath));
 		}		
