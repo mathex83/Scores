@@ -11,7 +11,8 @@ namespace Scores.Controllers
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
-        private static readonly JsonLoader r = new();
+        private static readonly string filePath = @".\wwwroot\files\pl.json";
+        private static readonly JsonLoader r = new(filePath);
         private readonly List<Match> MatchList = new();
         private List<Team> LeagueTable = new();
         Team replaceTeam = new();
@@ -179,7 +180,8 @@ namespace Scores.Controllers
             match.AwayScore = jsonMatch.AwayScore;
             match.AwayTeam = jsonMatch.AwayTeam;
             PopulateMatchList();
-            JsonSaver saver = new(MatchList);
+            
+            JsonSaver saver = new(MatchList, filePath);
             return RedirectToAction("ListView");
         }
 
