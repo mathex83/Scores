@@ -1,0 +1,514 @@
+[
+  {
+    "ID": 0,
+    "MatchDate": "21-11-2022 11:00",
+    "HomeTeam": "Senegal",
+    "HomeScore": "",
+    "AwayScore": "",
+    "AwayTeam": "Holland"
+  },
+  {
+    "ID": 1,
+    "MatchDate": "21-11-2022 14:00",
+    "HomeTeam": "England",
+    "HomeScore": "",
+    "AwayScore": "",
+    "AwayTeam": "Iran"
+  },
+  {
+    "ID": 2,
+    "MatchDate": "21-11-2022 17:00",
+    "HomeTeam": "Qatar",
+    "HomeScore": "",
+    "AwayScore": "",
+    "AwayTeam": "Ecuador"
+  },
+  {
+    "ID": 3,
+    "MatchDate": "21-11-2022 20:00",
+    "HomeTeam": "USA",
+    "HomeScore": "",
+    "AwayScore": "",
+    "AwayTeam": "Wales/Scotland/Ukraine"
+  },
+  {
+    "ID": 4,
+    "MatchDate": "22-11-2022 11:00",
+    "HomeTeam": "Argentina",
+    "HomeScore": "",
+    "AwayScore": "",
+    "AwayTeam": "Saudi Arabia"
+  },
+  {
+    "ID": 5,
+    "MatchDate": "22-11-2022 14:00",
+    "HomeTeam": "Denmark",
+    "HomeScore": "",
+    "AwayScore": "",
+    "AwayTeam": "Tunisia"
+  },
+  {
+    "ID": 6,
+    "MatchDate": "22-11-2022 17:00",
+    "HomeTeam": "Mexico",
+    "HomeScore": "",
+    "AwayScore": "",
+    "AwayTeam": "Poland"
+  },
+  {
+    "ID": 7,
+    "MatchDate": "22-11-2022 20:00",
+    "HomeTeam": "France",
+    "HomeScore": "",
+    "AwayScore": "",
+    "AwayTeam": "UAE/Australia/Peru"
+  },
+  {
+    "ID": 8,
+    "MatchDate": "23-11-2022 11:00",
+    "HomeTeam": "Morocco",
+    "HomeScore": "",
+    "AwayScore": "",
+    "AwayTeam": "Croatia"
+  },
+  {
+    "ID": 9,
+    "MatchDate": "23-11-2022 14:00",
+    "HomeTeam": "Germany",
+    "HomeScore": "",
+    "AwayScore": "",
+    "AwayTeam": "Japan"
+  },
+  {
+    "ID": 10,
+    "MatchDate": "23-11-2022 17:00",
+    "HomeTeam": "Spain",
+    "HomeScore": "",
+    "AwayScore": "",
+    "AwayTeam": "Costa Rica/New Zealand"
+  },
+  {
+    "ID": 11,
+    "MatchDate": "23-11-2022 20:00",
+    "HomeTeam": "Belgium",
+    "HomeScore": "",
+    "AwayScore": "",
+    "AwayTeam": "Canada"
+  },
+  {
+    "ID": 12,
+    "MatchDate": "24-11-2022 11:00",
+    "HomeTeam": "Schwitzerland",
+    "HomeScore": "",
+    "AwayScore": "",
+    "AwayTeam": "Cameroun"
+  },
+  {
+    "ID": 13,
+    "MatchDate": "24-11-2022 14:00",
+    "HomeTeam": "Uruguay",
+    "HomeScore": "",
+    "AwayScore": "",
+    "AwayTeam": "South Korea"
+  },
+  {
+    "ID": 14,
+    "MatchDate": "24-11-2022 17:00",
+    "HomeTeam": "Portugal",
+    "HomeScore": "",
+    "AwayScore": "",
+    "AwayTeam": "Ghana"
+  },
+  {
+    "ID": 15,
+    "MatchDate": "24-11-2022 20:00",
+    "HomeTeam": "Brazil",
+    "HomeScore": "",
+    "AwayScore": "",
+    "AwayTeam": "Serbia"
+  },
+  {
+    "ID": 16,
+    "MatchDate": "25-11-2022 11:00",
+    "HomeTeam": "Wales/Scotland/Ukraine",
+    "HomeScore": "",
+    "AwayScore": "",
+    "AwayTeam": "Iran"
+  },
+  {
+    "ID": 17,
+    "MatchDate": "25-11-2022 14:00",
+    "HomeTeam": "Qatar",
+    "HomeScore": "",
+    "AwayScore": "",
+    "AwayTeam": "Senegal"
+  },
+  {
+    "ID": 18,
+    "MatchDate": "25-11-2022 17:00",
+    "HomeTeam": "Holland",
+    "HomeScore": "",
+    "AwayScore": "",
+    "AwayTeam": "Ecuador"
+  },
+  {
+    "ID": 19,
+    "MatchDate": "25-11-2022 20:00",
+    "HomeTeam": "England",
+    "HomeScore": "",
+    "AwayScore": "",
+    "AwayTeam": "USA"
+  },
+  {
+    "ID": 20,
+    "MatchDate": "26-11-2022 11:00",
+    "HomeTeam": "Tunisia",
+    "HomeScore": "",
+    "AwayScore": "",
+    "AwayTeam": "UAE/Australia/Peru"
+  },
+  {
+    "ID": 21,
+    "MatchDate": "26-11-2022 14:00",
+    "HomeTeam": "Poland",
+    "HomeScore": "",
+    "AwayScore": "",
+    "AwayTeam": "Saudi Arabia"
+  },
+  {
+    "ID": 22,
+    "MatchDate": "26-11-2022 17:00",
+    "HomeTeam": "France",
+    "HomeScore": "",
+    "AwayScore": "",
+    "AwayTeam": "Denmark"
+  },
+  {
+    "ID": 23,
+    "MatchDate": "26-11-2022 20:00",
+    "HomeTeam": "Argentina",
+    "HomeScore": "",
+    "AwayScore": "",
+    "AwayTeam": "Mexico"
+  },
+  {
+    "ID": 24,
+    "MatchDate": "27-11-2022 11:00",
+    "HomeTeam": "Japan",
+    "HomeScore": "",
+    "AwayScore": "",
+    "AwayTeam": "Costa Rica/New Zealand"
+  },
+  {
+    "ID": 25,
+    "MatchDate": "27-11-2022 14:00",
+    "HomeTeam": "Belgium",
+    "HomeScore": "",
+    "AwayScore": "",
+    "AwayTeam": "Morocco"
+  },
+  {
+    "ID": 26,
+    "MatchDate": "27-11-2022 17:00",
+    "HomeTeam": "Croatia",
+    "HomeScore": "",
+    "AwayScore": "",
+    "AwayTeam": "Canada"
+  },
+  {
+    "ID": 27,
+    "MatchDate": "27-11-2022 20:00",
+    "HomeTeam": "Spain",
+    "HomeScore": "",
+    "AwayScore": "",
+    "AwayTeam": "Germany"
+  },
+  {
+    "ID": 28,
+    "MatchDate": "28-11-2022 11:00",
+    "HomeTeam": "Cameroun",
+    "HomeScore": "",
+    "AwayScore": "",
+    "AwayTeam": "Serbia"
+  },
+  {
+    "ID": 29,
+    "MatchDate": "28-11-2022 14:00",
+    "HomeTeam": "South Korea",
+    "HomeScore": "",
+    "AwayScore": "",
+    "AwayTeam": "Ghana"
+  },
+  {
+    "ID": 30,
+    "MatchDate": "28-11-2022 17:00",
+    "HomeTeam": "Brazil",
+    "HomeScore": "",
+    "AwayScore": "",
+    "AwayTeam": "Schwitzerland"
+  },
+  {
+    "ID": 31,
+    "MatchDate": "28-11-2022 20:00",
+    "HomeTeam": "Portugal",
+    "HomeScore": "",
+    "AwayScore": "",
+    "AwayTeam": "Uruguay"
+  },
+  {
+    "ID": 32,
+    "MatchDate": "29-11-2022 16:00",
+    "HomeTeam": "Holland",
+    "HomeScore": "",
+    "AwayScore": "",
+    "AwayTeam": "Qatar"
+  },
+  {
+    "ID": 33,
+    "MatchDate": "29-11-2022 16:00",
+    "HomeTeam": "Ecuador",
+    "HomeScore": "",
+    "AwayScore": "",
+    "AwayTeam": "Senegal"
+  },
+  {
+    "ID": 34,
+    "MatchDate": "29-11-2022 20:00",
+    "HomeTeam": "Iran",
+    "HomeScore": "",
+    "AwayScore": "",
+    "AwayTeam": "USA"
+  },
+  {
+    "ID": 35,
+    "MatchDate": "29-11-2022 20:00",
+    "HomeTeam": "Wales/Scotland/Ukraine",
+    "HomeScore": "",
+    "AwayScore": "",
+    "AwayTeam": "England"
+  },
+  {
+    "ID": 36,
+    "MatchDate": "30-11-2022 16:00",
+    "HomeTeam": "Tunisia",
+    "HomeScore": "",
+    "AwayScore": "",
+    "AwayTeam": "France"
+  },
+  {
+    "ID": 37,
+    "MatchDate": "30-11-2022 16:00",
+    "HomeTeam": "UAE/Australia/Peru",
+    "HomeScore": "",
+    "AwayScore": "",
+    "AwayTeam": "Denmark"
+  },
+  {
+    "ID": 38,
+    "MatchDate": "30-11-2022 20:00",
+    "HomeTeam": "Saudi Arabia",
+    "HomeScore": "",
+    "AwayScore": "",
+    "AwayTeam": "Mexico"
+  },
+  {
+    "ID": 39,
+    "MatchDate": "30-11-2022 20:00",
+    "HomeTeam": "Poland",
+    "HomeScore": "",
+    "AwayScore": "",
+    "AwayTeam": "Argentina"
+  },
+  {
+    "ID": 40,
+    "MatchDate": "01-12-2022 16:00",
+    "HomeTeam": "Canada",
+    "HomeScore": "",
+    "AwayScore": "",
+    "AwayTeam": "Morocco"
+  },
+  {
+    "ID": 41,
+    "MatchDate": "01-12-2022 16:00",
+    "HomeTeam": "Croatia",
+    "HomeScore": "",
+    "AwayScore": "",
+    "AwayTeam": "Belgium"
+  },
+  {
+    "ID": 42,
+    "MatchDate": "01-12-2022 20:00",
+    "HomeTeam": "Costa Rica/New Zealand",
+    "HomeScore": "",
+    "AwayScore": "",
+    "AwayTeam": "Germany"
+  },
+  {
+    "ID": 43,
+    "MatchDate": "01-12-2022 20:00",
+    "HomeTeam": "Japan",
+    "HomeScore": "",
+    "AwayScore": "",
+    "AwayTeam": "Spain"
+  },
+  {
+    "ID": 44,
+    "MatchDate": "02-12-2022 16:00",
+    "HomeTeam": "Ghana",
+    "HomeScore": "",
+    "AwayScore": "",
+    "AwayTeam": "Uruguay"
+  },
+  {
+    "ID": 45,
+    "MatchDate": "02-12-2022 16:00",
+    "HomeTeam": "South Korea",
+    "HomeScore": "",
+    "AwayScore": "",
+    "AwayTeam": "Portugal"
+  },
+  {
+    "ID": 46,
+    "MatchDate": "02-12-2022 20:00",
+    "HomeTeam": "Cameroun",
+    "HomeScore": "",
+    "AwayScore": "",
+    "AwayTeam": "Brazil"
+  },
+  {
+    "ID": 47,
+    "MatchDate": "02-12-2022 20:00",
+    "HomeTeam": "Serbia",
+    "HomeScore": "",
+    "AwayScore": "",
+    "AwayTeam": "Schwitzerland"
+  },
+  {
+    "ID": 48,
+    "MatchDate": "03-12-2022 16:00",
+    "HomeTeam": "A1",
+    "HomeScore": "",
+    "AwayScore": "",
+    "AwayTeam": "B2"
+  },
+  {
+    "ID": 49,
+    "MatchDate": "03-12-2022 20:00",
+    "HomeTeam": "C1",
+    "HomeScore": "",
+    "AwayScore": "",
+    "AwayTeam": "D2"
+  },
+  {
+    "ID": 50,
+    "MatchDate": "04-12-2022 16:00",
+    "HomeTeam": "D1",
+    "HomeScore": "",
+    "AwayScore": "",
+    "AwayTeam": "C2"
+  },
+  {
+    "ID": 51,
+    "MatchDate": "04-12-2022 20:00",
+    "HomeTeam": "B1",
+    "HomeScore": "",
+    "AwayScore": "",
+    "AwayTeam": "A2"
+  },
+  {
+    "ID": 52,
+    "MatchDate": "05-12-2022 16:00",
+    "HomeTeam": "E1",
+    "HomeScore": "",
+    "AwayScore": "",
+    "AwayTeam": "F2"
+  },
+  {
+    "ID": 53,
+    "MatchDate": "05-12-2022 20:00",
+    "HomeTeam": "G1",
+    "HomeScore": "",
+    "AwayScore": "",
+    "AwayTeam": "H2"
+  },
+  {
+    "ID": 54,
+    "MatchDate": "06-12-2022 16:00",
+    "HomeTeam": "F1",
+    "HomeScore": "",
+    "AwayScore": "",
+    "AwayTeam": "E2"
+  },
+  {
+    "ID": 55,
+    "MatchDate": "06-12-2022 20:00",
+    "HomeTeam": "H1",
+    "HomeScore": "",
+    "AwayScore": "",
+    "AwayTeam": "G2"
+  },
+  {
+    "ID": 56,
+    "MatchDate": "09-12-2022 16:00",
+    "HomeTeam": "E1F2",
+    "HomeScore": "",
+    "AwayScore": "",
+    "AwayTeam": "G1H2"
+  },
+  {
+    "ID": 57,
+    "MatchDate": "09-12-2022 20:00",
+    "HomeTeam": "A1B2",
+    "HomeScore": "",
+    "AwayScore": "",
+    "AwayTeam": "C1D2"
+  },
+  {
+    "ID": 58,
+    "MatchDate": "10-12-2022 16:00",
+    "HomeTeam": "F1E2",
+    "HomeScore": "",
+    "AwayScore": "",
+    "AwayTeam": "H1G2"
+  },
+  {
+    "ID": 59,
+    "MatchDate": "10-12-2022 20:00",
+    "HomeTeam": "B1A2",
+    "HomeScore": "",
+    "AwayScore": "",
+    "AwayTeam": "D1C2"
+  },
+  {
+    "ID": 60,
+    "MatchDate": "09-12-2022 16:00",
+    "HomeTeam": "A1B2C1D2",
+    "HomeScore": "",
+    "AwayScore": "",
+    "AwayTeam": "E1F2G1H2"
+  },
+  {
+    "ID": 61,
+    "MatchDate": "09-12-2022 16:00",
+    "HomeTeam": "B1A2D1C2",
+    "HomeScore": "",
+    "AwayScore": "",
+    "AwayTeam": "F1E2H1G2"
+  },
+  {
+    "ID": 62,
+    "MatchDate": "09-12-2022 16:00",
+    "HomeTeam": "Loser: A1B2C1D2E1F2G1H2",
+    "HomeScore": "",
+    "AwayScore": "",
+    "AwayTeam": "Loser: B1A2D1C2F1E2H1G2"
+  },
+  {
+    "ID": 63,
+    "MatchDate": "09-12-2022 16:00",
+    "HomeTeam": "A1B2C1D2E1F2G1H2",
+    "HomeScore": "",
+    "AwayScore": "",
+    "AwayTeam": "B1A2D1C2F1E2H1G2"
+  }
+]
