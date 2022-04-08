@@ -3,8 +3,14 @@ for details on configuring this project to bundle and minify static web assets. 
 .darker-bg {
     background-color: lightgray;
 }
+#myhomebtn {
+    margin-right: 100px;
+    width: 30px;
+}
+#navbarDropdown {
+    color: #000;
+}
 .logo {
-    
     width: 10vw !important;
 }
 a.navbar-brand {
