@@ -4,17 +4,12 @@
     ViewData["Title"] = "Edit";
 }
 
-<h1>Edit</h1>
+<h1><img src="~/img/bootstrap-icons-1.8.1/pen.svg"/> Edit</h1>
 <div class="row">
     <div class="col-md-4">
         <form asp-action="Edit">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <input type="hidden" asp-for="ID" />            
-            <div class="form-group">
-                <label asp-for="MatchDate" class="control-label"></label>
-                <input asp-for="MatchDate" class="form-control" />
-                <span asp-validation-for="MatchDate" class="text-danger"></span>
-            </div>
+            <input type="hidden" asp-for="ID" />
             <div class="form-group">
                 <label asp-for="HomeTeam" class="control-label"></label>
                 <input asp-for="HomeTeam" class="form-control" />
@@ -43,7 +38,7 @@
 </div>
 
 <div>
-    <a asp-action="ListView">Back to List</a>
+    <a asp-action="PL2122Matches">Back to matchlist</a>
 </div>
 
 @section Scripts {

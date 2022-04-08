@@ -1,7 +1,7 @@
 ﻿@model IEnumerable<Scores.Models.Match>
 
 @{
-    ViewData["Title"] = "PL";
+    ViewData["Title"] = "Premier League 21/22";
 }
 
 <table class="table">
@@ -11,24 +11,19 @@
                 @Html.DisplayNameFor(model => model.ID)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.MatchDate)
+                @Html.ActionLink("Date", 
+                "PL2122Matches", new { sortOrder = ViewData["DateSort"] })
             </th>
             <th>
                 @Html.ActionLink(@Html.DisplayNameFor(model => model.HomeTeam), 
-                "ListView", new { sortOrder = ViewData["HomeTeamSort"] })
-            </th>
-            <th>
-                
+                "PL2122Matches", new { sortOrder = ViewData["HomeTeamSort"] })
             </th>
             <th>
 
-            </th>
-            <th>
-                
-            </th>
+            </th>            
             <th>
                 @Html.ActionLink(@Html.DisplayNameFor(model => model.AwayTeam), 
-                "ListView", new { sortOrder = ViewData["AwayTeamSort"] })
+                "PL2122Matches", new { sortOrder = ViewData["AwayTeamSort"] })
             </th>
             <th>
 
@@ -42,25 +37,22 @@
                 @Html.DisplayFor(modelItem => item.ID)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.MatchDate)
+                @item.MatchDay.ToString("D2")-@item.MatchMonth.ToString("D2")-@item.MatchYear @item.MatchHour.ToString("D2"):@item.MatchMinute.ToString("D2")
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.HomeTeam)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.HomeScore)
-            </td>
-            <td>
-                -
-            </td>
-            <td>
+                 - 
                 @Html.DisplayFor(modelItem => item.AwayScore)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.AwayTeam)
             </td>
             <td>
-                @Html.ActionLink("Edit", "Edit", new { id = item.ID })
+                <img src="~/img/bootstrap-icons-1.8.1/pen.svg"/>
+                 @Html.ActionLink("Edit", "Edit", new { id = item.ID })
             </td>
         </tr>
 }

@@ -1,7 +1,7 @@
 ﻿@model IEnumerable<Scores.Models.Team>
 
 @{
-    ViewData["Title"] = "LeagueView";
+    ViewData["Title"] = "World Cup 22 Tables";
 }
 
 <table class="table">
@@ -18,41 +18,27 @@
             </th>
             <th>                
                 @Html.ActionLink(@Html.DisplayNameFor(model => model.MatchesWon), 
-                "LeagueView", new { sortOrder = ViewData["WSort"] })
+                "WC22Tables", new { sortOrder = ViewData["WSort"] })
             </th>
             <th>
-                @Html.ActionLink(@Html.DisplayNameFor(model => model.MatchesDrawn)
-                , "LeagueView", new { sortOrder = ViewData["DSort"] })
+                @Html.ActionLink(@Html.DisplayNameFor(model => model.MatchesDrawn),
+                "WC22Tables", new { sortOrder = ViewData["DSort"] })
             </th>
             <th>
                 @Html.ActionLink(@Html.DisplayNameFor(model => model.MatchesLost), 
-                "LeagueView", new { sortOrder = ViewData["LSort"] })
+                "WC22Tables", new { sortOrder = ViewData["LSort"] })
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.GoalsFor)
+                 - 
+                @Html.DisplayNameFor(model => model.GoalsAgainst) 
             </th>
-            <th>
-
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.GoalsAgainst)                
-            </th>            
             <th>
                 @Html.DisplayNameFor(model => model.GoalDifference)
             </th>
             <th>
                 @Html.ActionLink(@Html.DisplayNameFor(model => model.Points), 
-                "LeagueView", new { sortOrder = ViewData["PtSort"] })
-            </th>
-            <th>
-                 | 
-            </th>
-            <th>
-                Even
-            </th>
-            <th>
-                @Html.ActionLink(@Html.DisplayNameFor(model => model.MaxPoints), 
-                "LeagueView", new { sortOrder = ViewData["PtMax"] })
+                "WC22Tables", new { sortOrder = ViewData["PtSort"] })
             </th>
         </tr>
     </thead>
@@ -79,32 +65,15 @@
                 @Html.DisplayFor(modelItem => item.MatchesLost)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.GoalsFor)
-            </td>
-            <td>
-                -
-            </td>
-            <td>
+                @Html.DisplayFor(modelItem => item.GoalsFor)            
+                 -             
                 @Html.DisplayFor(modelItem => item.GoalsAgainst)
             </td>
-            <td>                
+            <td>
                 @Html.DisplayFor(modelItem => item.GoalDifference)
             </td>
             <td>                
                 @Html.DisplayFor(modelItem => item.Points)
-            </td>
-            <td>
-                 | 
-            </td>
-            <td>
-                =@{
-                    int maxMatchesPlayed = Model.Max(t => t.Played);
-                    int evenOutPoints = (maxMatchesPlayed - item.Played) * 3 + item.Points;
-                    @evenOutPoints
-                }
-            </td>
-            <td>
-                =@Html.DisplayFor(modelItem => item.MaxPoints)
             </td>
         </tr>
 }

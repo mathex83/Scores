@@ -4,17 +4,17 @@ using Scores.Models;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
-using System.Threading.Tasks;
 
 namespace Scores.Controllers
 {
-    public class WorldCup2022Controller : Controller
+    public class PL21_22Controller : Controller
     {
-        private readonly ILogger<WorldCup2022Controller> _logger;
-        private static readonly string filePath = @".\wwwroot\files\wc2022.json";
+        private readonly ILogger<PL21_22Controller> _logger;
+        private static readonly string filePath = @".\wwwroot\files\pl.json";
         private static readonly JsonLoader r = new(filePath);
         private readonly List<Match> MatchList = new();
         private List<Team> LeagueTable = new();
+        Team replaceTeam = new();
 
         private void PopulateMatchList()
         {
@@ -28,19 +28,26 @@ namespace Scores.Controllers
         {
             PopulateMatchList();
             League league = new League(MatchList);
-            LeagueTable = league.LeagueTable;            
+            LeagueTable = league.LeagueTable;
         }
-        public WorldCup2022Controller(ILogger<WorldCup2022Controller> logger)
+        public PL21_22Controller(ILogger<PL21_22Controller> logger)
         {
             _logger = logger;
         }
 
-        public IActionResult ListView(string sortOrder)
+        public IActionResult PL2122Matches(string sortOrder)
         {
             PopulateMatchList();
             var matches = from m in MatchList select m;
+            foreach (Match m in matches)
+            {
+                m.HomeTeam = replaceTeam.TeamNameReplace(m.HomeTeam);
+                m.AwayTeam = replaceTeam.TeamNameReplace(m.AwayTeam);
+            }
 
             #region Input for MatchSorting
+            ViewData["DateSort"]=
+                string.IsNullOrEmpty(sortOrder) || sortOrder == "d_desc" ? "d" : "d_desc";
             ViewData["HomeTeamSort"] =
                     string.IsNullOrEmpty(sortOrder) || sortOrder == "h_desc" ? "h" : "h_desc";
             ViewData["AwayTeamSort"] =
@@ -50,6 +57,20 @@ namespace Scores.Controllers
             #region MatchesSortingSwitch
             switch (sortOrder)
             {
+                case "d":
+                    matches = matches.OrderBy(m => m.MatchYear)
+                        .ThenBy(m => m.MatchMonth)
+                        .ThenBy(m => m.MatchDay)
+                        .ThenBy(m => m.MatchHour)
+                        .ThenBy(m => m.MatchMinute);
+                    break;
+                case "d_desc":
+                    matches = matches.OrderByDescending(m => m.MatchYear)
+                        .ThenByDescending(m => m.MatchMonth)
+                        .ThenByDescending(m => m.MatchDay)
+                        .ThenByDescending(m => m.MatchHour)
+                        .ThenByDescending(m => m.MatchMinute);
+                    break;
                 case "h":
                     matches = matches.OrderBy(m => m.HomeTeam).ThenBy(m => m.ID);
                     break;
@@ -63,20 +84,25 @@ namespace Scores.Controllers
                     matches = matches.OrderByDescending(m => m.AwayTeam).ThenBy(m => m.ID);
                     break;
                 default:
-                    matches = matches.OrderBy(m => m.ID);
+                    matches = matches.OrderBy(m => m.MatchYear)
+                        .ThenBy(m => m.MatchMonth)
+                        .ThenBy(m => m.MatchDay)
+                        .ThenBy(m => m.MatchHour)
+                        .ThenBy(m => m.MatchMinute);
                     break;
             }
             #endregion
 
             return View(matches);
         }
-        public IActionResult LeagueView(string sortOrder)
+        public IActionResult PL2122Table(string sortOrder)
         {
             PopulateLeagueTable();
-            var league = from t in LeagueTable 
-                         //to make it correct team names and not those from knockout phase
-                         where t.TeamID<32
-                         select t;
+            var league = from t in LeagueTable select t;
+            foreach (Team t in league)
+            {
+                t.TeamName = replaceTeam.TeamNameReplace(t.TeamName);
+            }
 
             #region Input for LeagueSorting
             ViewData["WSort"] =
@@ -87,6 +113,8 @@ namespace Scores.Controllers
                     string.IsNullOrEmpty(sortOrder) || sortOrder == "l_desc" ? "l" : "l_desc";
             ViewData["PtSort"] =
                     string.IsNullOrEmpty(sortOrder) || sortOrder == "pt_desc" ? "pt" : "pt_desc";
+            ViewData["PtMax"] =
+                string.IsNullOrEmpty(sortOrder) || sortOrder == "ptMax_desc" ? "ptMax" : "ptMax_desc";
             #endregion
 
             #region LeagueSortingSwitch
@@ -116,9 +144,15 @@ namespace Scores.Controllers
                 case "pt_desc":
                     league = league.OrderByDescending(t => t.Points);
                     break;
+                case "ptMax":
+                    league = league.OrderBy(t => t.MaxPoints);
+                    break;
+                case "ptMax_desc":
+                    league = league.OrderByDescending((t) => t.MaxPoints);
+                    break;
                 default:
                     league = league.OrderByDescending(t => t.Points)
-                        .ThenByDescending(t=>t.GoalDifference);
+                        .ThenByDescending(t => t.GoalDifference);
                     break;
             }
             #endregion
@@ -141,15 +175,19 @@ namespace Scores.Controllers
         public IActionResult Edit(JsonMatch jsonMatch)
         {
             JsonMatch match = r.Matches.Where(m => m.ID == jsonMatch.ID).FirstOrDefault();
-            match.MatchDate = jsonMatch.MatchDate;
+            match.MatchDay = match.MatchDay;
+            match.MatchMonth = match.MatchMonth;
+            match.MatchYear = match.MatchYear;
+            match.MatchHour = match.MatchHour;
+            match.MatchMinute = match.MatchMinute;
             match.HomeTeam = jsonMatch.HomeTeam;
-            match.HomeScore = jsonMatch.HomeScore;
-            match.AwayScore = jsonMatch.AwayScore;
+            match.HomeScore = jsonMatch.HomeScore == "" ? "" : jsonMatch.HomeScore;
+            match.AwayScore = jsonMatch.AwayScore == "" ? "" : jsonMatch.AwayScore;
             match.AwayTeam = jsonMatch.AwayTeam;
             PopulateMatchList();
-            
+
             JsonSaver saver = new(MatchList, filePath);
-            return RedirectToAction("ListView");
+            return RedirectToAction("PL2122Matches");
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

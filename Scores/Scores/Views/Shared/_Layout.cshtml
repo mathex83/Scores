@@ -6,30 +6,53 @@
     <title>@ViewData["Title"] - Scores</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" />
+    
 </head>
 <body class="darker-bg">
     <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-transparent border-bottom box-shadow mb-3">
             <div class="container bg-transparent">
-                <a class="btn btn-primary" style="margin:5px;" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                <a asp-area="" asp-controller="Home" asp-action="Index">
+                    <img src="~/img/bootstrap-icons-1.8.1/house.svg" id="myhomebtn" aria-hidden="true"/>
+                </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
 					<ul class="navbar-nav flex-grow-1">
-						<li class="nav-item">
-							<a class="btn btn-primary" style="margin:5px;" asp-area="" asp-controller="Home" asp-action="ListView">Match list</a>
-						</li>
-                        <li class="nav-item">
-							<a class="btn btn-primary" style="margin:5px;" asp-area="" asp-controller="Home" asp-action="LeagueView">League table</a>
-						</li>
-                        <li class="nav-item">
-							<a class="btn btn-primary" style="margin:5px;" asp-area="" asp-controller="WorldCup2022" asp-action="LeagueView">World Cup 2022 Standings</a>
-						</li>
-                        <li class="nav-item">
-							<a class="btn btn-primary" style="margin:5px;" asp-area="" asp-controller="WorldCup2022" asp-action="ListView">World Cup 2022 Matches</a>
-						</li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false">
+                               Premier League 21/22
+                            </a>
+                            <div class="dropdown-menu darker-bg" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" data-bs-toggle="dropdown" asp-controller="PL21_22" asp-action="PL2122Matches">
+                                    <img src="~/img/bootstrap-icons-1.8.1/calendar3.svg" aria-hidden="true"/>
+                                     Matches
+                                </a>
+                                <a class="dropdown-item" data-bs-toggle="dropdown" asp-controller="PL21_22" asp-action="PL2122Table">
+                                    <img src="~/img/bootstrap-icons-1.8.1/list-ol.svg" aria-hidden="true"/>
+                                     Standings
+                                </a>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false">
+                                WorldCup2022
+                            </a>
+                            <div class="dropdown-menu darker-bg" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" data-bs-toggle="dropdown" asp-controller="WC22" asp-action="WC22Matches">
+                                    <img src="~/img/bootstrap-icons-1.8.1/calendar3.svg" aria-hidden="true"/>
+                                     Matches
+                                </a>
+                                <a class="dropdown-item" data-bs-toggle="dropdown" asp-controller="WC22" asp-action="WC22Tables">
+                                    <img src="~/img/bootstrap-icons-1.8.1/list-ol.svg" aria-hidden="true"/>
+                                     Standings
+                                </a>
+                            </div>
+                        </li>
 					</ul>
                 </div>
             </div>

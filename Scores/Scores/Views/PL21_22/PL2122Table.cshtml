@@ -1,7 +1,7 @@
 ﻿@model IEnumerable<Scores.Models.Team>
 
 @{
-    ViewData["Title"] = "World Cup 2022 Standings";
+    ViewData["Title"] = "Premier League 21/22 Table";
 }
 
 <table class="table">
@@ -18,31 +18,37 @@
             </th>
             <th>                
                 @Html.ActionLink(@Html.DisplayNameFor(model => model.MatchesWon), 
-                "LeagueView", new { sortOrder = ViewData["WSort"] })
+                "PL2122Table", new { sortOrder = ViewData["WSort"] })
             </th>
             <th>
-                @Html.ActionLink(@Html.DisplayNameFor(model => model.MatchesDrawn)
-                , "LeagueView", new { sortOrder = ViewData["DSort"] })
+                @Html.ActionLink(@Html.DisplayNameFor(model => model.MatchesDrawn),
+                "PL2122Table", new { sortOrder = ViewData["DSort"] })
             </th>
             <th>
                 @Html.ActionLink(@Html.DisplayNameFor(model => model.MatchesLost), 
-                "LeagueView", new { sortOrder = ViewData["LSort"] })
+                "PL2122Table", new { sortOrder = ViewData["LSort"] })
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.GoalsFor)
-            </th>
-            <th>
-
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.GoalsAgainst)                
+                 - 
+                @Html.DisplayNameFor(model => model.GoalsAgainst) 
             </th>            
             <th>
                 @Html.DisplayNameFor(model => model.GoalDifference)
             </th>
             <th>
                 @Html.ActionLink(@Html.DisplayNameFor(model => model.Points), 
-                "LeagueView", new { sortOrder = ViewData["PtSort"] })
+                "PL2122Table", new { sortOrder = ViewData["PtSort"] })
+            </th>
+            <th>
+                 | 
+            </th>
+            <th>
+                Even
+            </th>
+            <th>
+                @Html.ActionLink(@Html.DisplayNameFor(model => model.MaxPoints), 
+                "PL2122Table", new { sortOrder = ViewData["PtMax"] })
             </th>
         </tr>
     </thead>
@@ -69,12 +75,8 @@
                 @Html.DisplayFor(modelItem => item.MatchesLost)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.GoalsFor)
-            </td>
-            <td>
-                -
-            </td>
-            <td>
+                @Html.DisplayFor(modelItem => item.GoalsFor)            
+                 -             
                 @Html.DisplayFor(modelItem => item.GoalsAgainst)
             </td>
             <td>                
@@ -82,6 +84,19 @@
             </td>
             <td>                
                 @Html.DisplayFor(modelItem => item.Points)
+            </td>
+            <td>
+                 | 
+            </td>
+            <td>
+                =@{
+                    int maxMatchesPlayed = Model.Max(t => t.Played);
+                    int evenOutPoints = (maxMatchesPlayed - item.Played) * 3 + item.Points;
+                    @evenOutPoints
+                }
+            </td>
+            <td>
+                =@Html.DisplayFor(modelItem => item.MaxPoints)
             </td>
         </tr>
 }
