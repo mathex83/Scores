@@ -10,27 +10,40 @@ namespace Scores.Models
 
         [Display(Name = "Home")]
         public string HomeTeam { get; set; }
-
-        [Display(Name = "HS")]
         public int? HomeScore { get; set; }
-
-        [Display(Name = "AS")]
         public int? AwayScore { get; set; }
 
         [Display(Name = "Away")]
         public string AwayTeam { get; set; }
 
-        public string MatchDate { get; set; }
+        //public string MatchDate { get; set; }
+        
+        public int MatchDay { get; set; }
+        
+        public int MatchMonth { get; set; }
+        
+        public int MatchYear { get; set; }
+        
+        public int MatchHour { get; set; }
+        
+        public int MatchMinute { get; set; }
 
-        public int MatchResult { get; set; }
+        public int? MatchResult { get; set; }
+        
         public List<Match> MatchList { get; set; }
+        
         public Match(JsonMatch jsonMatch)
         {
             ID = jsonMatch.ID;
-            MatchDate = jsonMatch.MatchDate;
+            //MatchDate = jsonMatch.MatchDate;
+            MatchDay = int.Parse(jsonMatch.MatchDay);
+            MatchMonth = int.Parse(jsonMatch.MatchMonth);
+            MatchYear = int.Parse(jsonMatch.MatchYear);
+            MatchHour = int.Parse(jsonMatch.MatchHour);
+            MatchMinute = int.Parse(jsonMatch.MatchMinute);
             HomeTeam = jsonMatch.HomeTeam;
             HomeScore = jsonMatch.HomeScore == "" ? null : int.Parse(jsonMatch.HomeScore);
-            AwayScore = jsonMatch.HomeScore == "" ? null : int.Parse(jsonMatch.AwayScore);
+            AwayScore = jsonMatch.AwayScore == "" ? null : int.Parse(jsonMatch.AwayScore);
             AwayTeam = jsonMatch.AwayTeam;
             MatchResult = GetMatchWinner(HomeScore, AwayScore);
         }
