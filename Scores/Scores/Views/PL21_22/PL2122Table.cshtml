@@ -1,0 +1,104 @@
+﻿@model IEnumerable<Scores.Models.Team>
+
+@{
+    ViewData["Title"] = "Premier League 21/22 Table";
+}
+
+<table class="table">
+    <thead>
+        <tr>
+            <th hidden>
+                @Html.DisplayNameFor(model => model.TeamID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TeamName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Played)
+            </th>
+            <th>                
+                @Html.ActionLink(@Html.DisplayNameFor(model => model.MatchesWon), 
+                "PL2122Table", new { sortOrder = ViewData["WSort"] })
+            </th>
+            <th>
+                @Html.ActionLink(@Html.DisplayNameFor(model => model.MatchesDrawn),
+                "PL2122Table", new { sortOrder = ViewData["DSort"] })
+            </th>
+            <th>
+                @Html.ActionLink(@Html.DisplayNameFor(model => model.MatchesLost), 
+                "PL2122Table", new { sortOrder = ViewData["LSort"] })
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.GoalsFor)
+                 - 
+                @Html.DisplayNameFor(model => model.GoalsAgainst) 
+            </th>            
+            <th>
+                @Html.DisplayNameFor(model => model.GoalDifference)
+            </th>
+            <th>
+                @Html.ActionLink(@Html.DisplayNameFor(model => model.Points), 
+                "PL2122Table", new { sortOrder = ViewData["PtSort"] })
+            </th>
+            <th>
+                 | 
+            </th>
+            <th>
+                Even
+            </th>
+            <th>
+                @Html.ActionLink(@Html.DisplayNameFor(model => model.MaxPoints), 
+                "PL2122Table", new { sortOrder = ViewData["PtMax"] })
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model)
+{
+        <tr>
+            <td hidden>
+                @Html.DisplayFor(modelItem => item.TeamID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TeamName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Played)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MatchesWon)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MatchesDrawn)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MatchesLost)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.GoalsFor)            
+                 -             
+                @Html.DisplayFor(modelItem => item.GoalsAgainst)
+            </td>
+            <td>                
+                @Html.DisplayFor(modelItem => item.GoalDifference)
+            </td>
+            <td>                
+                @Html.DisplayFor(modelItem => item.Points)
+            </td>
+            <td>
+                 | 
+            </td>
+            <td>
+                =@{
+                    int maxMatchesPlayed = Model.Max(t => t.Played);
+                    int evenOutPoints = (maxMatchesPlayed - item.Played) * 3 + item.Points;
+                    @evenOutPoints
+                }
+            </td>
+            <td>
+                =@Html.DisplayFor(modelItem => item.MaxPoints)
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
