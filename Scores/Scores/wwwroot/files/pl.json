@@ -3823,8 +3823,8 @@
     "MatchHour": "21",
     "MatchMinute": "00",
     "HomeTeam": "Liverpool",
-    "HomeScore": "",
-    "AwayScore": "",
+    "HomeScore": "4",
+    "AwayScore": "0",
     "AwayTeam": "Man Utd"
   },
   {
@@ -3835,8 +3835,8 @@
     "MatchHour": "20",
     "MatchMinute": "45",
     "HomeTeam": "Chelsea",
-    "HomeScore": "",
-    "AwayScore": "",
+    "HomeScore": "2",
+    "AwayScore": "4",
     "AwayTeam": "Arsenal"
   },
   {
@@ -3847,8 +3847,8 @@
     "MatchHour": "20",
     "MatchMinute": "45",
     "HomeTeam": "Everton",
-    "HomeScore": "",
-    "AwayScore": "",
+    "HomeScore": "1",
+    "AwayScore": "1",
     "AwayTeam": "Leicester"
   },
   {
@@ -3859,8 +3859,8 @@
     "MatchHour": "20",
     "MatchMinute": "45",
     "HomeTeam": "Newcastle",
-    "HomeScore": "",
-    "AwayScore": "",
+    "HomeScore": "1",
+    "AwayScore": "0",
     "AwayTeam": "Crystal Palace"
   },
   {
@@ -3871,8 +3871,8 @@
     "MatchHour": "21",
     "MatchMinute": "00",
     "HomeTeam": "Man City",
-    "HomeScore": "",
-    "AwayScore": "",
+    "HomeScore": "3",
+    "AwayScore": "0",
     "AwayTeam": "Brighton"
   },
   {
