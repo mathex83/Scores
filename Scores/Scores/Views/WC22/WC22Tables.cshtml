@@ -1,81 +1,63 @@
-﻿@model IEnumerable<Scores.Models.Team>
+﻿@model List<List<Scores.Models.Team>>
 
 @{
     ViewData["Title"] = "World Cup 22 Tables";
 }
 
-<table class="table">
-    <thead>
-        <tr>
-            <th hidden>
-                @Html.DisplayNameFor(model => model.TeamID)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.TeamName)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Played)
-            </th>
-            <th>                
-                @Html.ActionLink(@Html.DisplayNameFor(model => model.MatchesWon), 
-                "WC22Tables", new { sortOrder = ViewData["WSort"] })
-            </th>
-            <th>
-                @Html.ActionLink(@Html.DisplayNameFor(model => model.MatchesDrawn),
-                "WC22Tables", new { sortOrder = ViewData["DSort"] })
-            </th>
-            <th>
-                @Html.ActionLink(@Html.DisplayNameFor(model => model.MatchesLost), 
-                "WC22Tables", new { sortOrder = ViewData["LSort"] })
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.GoalsFor)
-                 - 
-                @Html.DisplayNameFor(model => model.GoalsAgainst) 
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.GoalDifference)
-            </th>
-            <th>
-                @Html.ActionLink(@Html.DisplayNameFor(model => model.Points), 
-                "WC22Tables", new { sortOrder = ViewData["PtSort"] })
-            </th>
-        </tr>
-    </thead>
-    <tbody>
-@foreach (var item in Model)
-{
-        <tr>
-            <td hidden>
-                @Html.DisplayFor(modelItem => item.TeamID)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.TeamName)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Played)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.MatchesWon)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.MatchesDrawn)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.MatchesLost)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.GoalsFor)            
-                 -             
-                @Html.DisplayFor(modelItem => item.GoalsAgainst)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.GoalDifference)
-            </td>
-            <td>                
-                @Html.DisplayFor(modelItem => item.Points)
-            </td>
-        </tr>
-}
-    </tbody>
-</table>
+<div class="card">
+    <div class="card-header">
+        <ul class="nav nav-pills card-header-pills">
+                @foreach (var item in Model)
+                {
+                <li class="nav-item">
+                    <a class="nav-link" href="#">
+                        Group @(Model.IndexOf(item) + 1)
+                    </a>
+                </li>
+            }
+        </ul>
+            @foreach (var league in Model)
+            {
+                        <div>
+                            @*<div class="card">*@
+                                <div class="card-body">
+                                    <div class="table-responsive">
+                                        <table class="table-sm">
+                                            <thead class="thead-dark">
+                                                <tr>
+                                                    <th>Team name</th>
+                                                    <th>PL</th>
+                                                    <th>W</th>
+                                                    <th>D</th>
+                                                    <th>L</th>
+                                                    <th>GF</th>
+                                                    <th>GA</th>
+                                                    <th>GD</th>
+                                                    <th>P</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                @foreach (var team in league)
+                                                {
+                                                    <tr>
+                                                        <td>@team.TeamName</td>
+                                                        <td>@team.Played</td>
+                                                        <td>@team.MatchesWon</td>
+                                                        <td>@team.MatchesDrawn</td>
+                                                        <td>@team.MatchesLost</td>
+                                                        <td>@team.GoalsFor</td>
+                                                        <td>@team.GoalsAgainst</td>
+                                                        <td>@team.GoalDifference</td>
+                                                        <td>@team.Points</td>
+                                                    </tr>
+                                                }
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            @*</div>*@
+                        </div>
+            }
+        
+    </div>
+</div>

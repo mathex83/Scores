@@ -1,9 +1,11 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Scores.Models;
+using Scores.Models.DTOs;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
+using Scores.Models.Extensions;
 
 namespace Scores.Controllers
 {
@@ -16,6 +18,10 @@ namespace Scores.Controllers
         private List<Team> LeagueTable = new();
         Team replaceTeam = new();
 
+        public WC22Controller(ILogger<WC22Controller> logger)
+        {
+            _logger = logger;
+        }
         private void PopulateMatchList()
         {
             MatchList.Clear();
@@ -30,10 +36,7 @@ namespace Scores.Controllers
             League league = new League(MatchList);
             LeagueTable = league.LeagueTable;
         }
-        public WC22Controller(ILogger<WC22Controller> logger)
-        {
-            _logger = logger;
-        }
+        
         public IActionResult WC22Matches(string sortOrder)
         {
             PopulateMatchList();
@@ -89,9 +92,56 @@ namespace Scores.Controllers
 
             return View(matches);
         }
+        private List<Team> SortLeague(List<Team> league,string sortOrder)
+        {
+            #region TableSortingSwitch
+            switch (sortOrder)
+            {
+                case "w":
+                    league = league.OrderBy(t => t.MatchesWon).ToList();
+                    break;
+                case "w_desc":
+                    league = league.OrderByDescending(t => t.MatchesWon).ToList();
+                    break;
+                case "d":
+                    league = league.OrderBy(t => t.MatchesDrawn).ToList();
+                    break;
+                case "d_desc":
+                    league = league.OrderByDescending(t => t.MatchesDrawn).ToList();
+                    break;
+                case "l":
+                    league = league.OrderBy(t => t.MatchesLost).ToList();
+                    break;
+                case "l_desc":
+                    league = league.OrderByDescending(t => t.MatchesLost).ToList();
+                    break;
+                case "pt":
+                    league = league.OrderBy(t => t.Points).ToList();
+                    break;
+                case "pt_desc":
+                    league = league.OrderByDescending(t => t.Points).ToList();
+                    break;
+                default:
+                    league = league.OrderByDescending(t => t.Points)
+                        .ThenByDescending(t => t.GoalDifference).ToList();
+                    break;
+            }
+            #endregion
+            return league;
+        }
         public IActionResult WC22Tables(string sortOrder)
         {
             PopulateLeagueTable();
+
+            List<string> a = new() { "Ecuador", "Holland", "Qatar","Senegal" };
+            List<string> b = new() { "England", "Iran", "USA", "Wales" };
+            List<string> c = new() { "Argentina", "Mexico", "Poland", "Saudi Arabia" };
+            List<string> d = new() { "Australia", "Denmark", "France", "Tunisia" };
+            List<string> e = new() { "Costa Rica", "Germany", "Japan", "Spain" };
+            List<string> f = new() { "Belgium", "Canada", "Croatia", "Morocco" };
+            List<string> g = new() { "Brazil", "Cameroun", "Schwitzerland", "Serbia"};
+            List<string> h = new() { "Ghana", "Portugal", "South Korea", "Uruguay" };
+
             var league = from t in LeagueTable select t;
 
             #region Input for TableSorting
@@ -105,41 +155,17 @@ namespace Scores.Controllers
                     string.IsNullOrEmpty(sortOrder) || sortOrder == "pt_desc" ? "pt" : "pt_desc";
             #endregion
 
-            #region TableSortingSwitch
-            switch (sortOrder)
-            {
-                case "w":
-                    league = league.OrderBy(t => t.MatchesWon);
-                    break;
-                case "w_desc":
-                    league = league.OrderByDescending(t => t.MatchesWon);
-                    break;
-                case "d":
-                    league = league.OrderBy(t => t.MatchesDrawn);
-                    break;
-                case "d_desc":
-                    league = league.OrderByDescending(t => t.MatchesDrawn);
-                    break;
-                case "l":
-                    league = league.OrderBy(t => t.MatchesLost);
-                    break;
-                case "l_desc":
-                    league = league.OrderByDescending(t => t.MatchesLost);
-                    break;
-                case "pt":
-                    league = league.OrderBy(t => t.Points);
-                    break;
-                case "pt_desc":
-                    league = league.OrderByDescending(t => t.Points);
-                    break;
-                default:
-                    league = league.OrderByDescending(t => t.Points)
-                        .ThenByDescending(t => t.GoalDifference);
-                    break;
-            }
-            #endregion
-
-            return View(league);
+            List<List<Team>> groupList = new();
+            groupList.Add(SortLeague(new() { LeagueTable.First(x => x.TeamName == a[0]), LeagueTable.First(x => x.TeamName == a[1]), LeagueTable.First(x => x.TeamName == a[2]), LeagueTable.First(x => x.TeamName == a[3]) }, sortOrder));
+            groupList.Add(SortLeague(new() { LeagueTable.First(x => x.TeamName == b[0]), LeagueTable.First(x => x.TeamName == b[1]), LeagueTable.First(x => x.TeamName == b[2]), LeagueTable.First(x => x.TeamName == b[3]) }, sortOrder));
+            groupList.Add(SortLeague(new() { LeagueTable.First(x => x.TeamName == c[0]), LeagueTable.First(x => x.TeamName == c[1]), LeagueTable.First(x => x.TeamName == c[2]), LeagueTable.First(x => x.TeamName == c[3]) }, sortOrder));
+            groupList.Add(SortLeague(new() { LeagueTable.First(x => x.TeamName == d[0]), LeagueTable.First(x => x.TeamName == d[1]), LeagueTable.First(x => x.TeamName == d[2]), LeagueTable.First(x => x.TeamName == d[3]) }, sortOrder));
+            groupList.Add(SortLeague(new() { LeagueTable.First(x => x.TeamName == e[0]), LeagueTable.First(x => x.TeamName == e[1]), LeagueTable.First(x => x.TeamName == e[2]), LeagueTable.First(x => x.TeamName == e[3]) }, sortOrder));
+            groupList.Add(SortLeague(new() { LeagueTable.First(x => x.TeamName == f[0]), LeagueTable.First(x => x.TeamName == f[1]), LeagueTable.First(x => x.TeamName == f[2]), LeagueTable.First(x => x.TeamName == f[3]) }, sortOrder));
+            groupList.Add(SortLeague(new() { LeagueTable.First(x => x.TeamName == g[0]), LeagueTable.First(x => x.TeamName == g[1]), LeagueTable.First(x => x.TeamName == g[2]), LeagueTable.First(x => x.TeamName == g[3]) }, sortOrder));
+            groupList.Add(SortLeague(new() { LeagueTable.First(x => x.TeamName == h[0]), LeagueTable.First(x => x.TeamName == h[1]), LeagueTable.First(x => x.TeamName == h[2]), LeagueTable.First(x => x.TeamName == h[3]) }, sortOrder));
+            
+            return View(groupList);
         }
 
         // GET: JsonMatches/Edit/5

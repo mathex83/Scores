@@ -10,6 +10,7 @@
             <th hidden>
                 @Html.DisplayNameFor(model => model.TeamID)
             </th>
+            <th></th>
             <th>
                 @Html.DisplayNameFor(model => model.TeamName)
             </th>
@@ -53,12 +54,17 @@
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model)
-{
+        @{
+            int i = 1;
+            foreach (var item in Model)
+        {
         <tr>
             <td hidden>
                 @Html.DisplayFor(modelItem => item.TeamID)
             </td>
+            <th>
+                @i.ToString("d2").
+            </th>
             <td>
                 @Html.DisplayFor(modelItem => item.TeamName)
             </td>
@@ -99,6 +105,7 @@
                 =@Html.DisplayFor(modelItem => item.MaxPoints)
             </td>
         </tr>
-}
+        i++;
+        }}
     </tbody>
 </table>

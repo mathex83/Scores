@@ -7,8 +7,8 @@
     "MatchHour": "11",
     "MatchMinute": "00",
     "HomeTeam": "Senegal",
-    "HomeScore": "",
-    "AwayScore": "",
+    "HomeScore": "0",
+    "AwayScore": "2",
     "AwayTeam": "Holland"
   },
   {
@@ -19,8 +19,8 @@
     "MatchHour": "14",
     "MatchMinute": "00",
     "HomeTeam": "England",
-    "HomeScore": "",
-    "AwayScore": "",
+    "HomeScore": "6",
+    "AwayScore": "2",
     "AwayTeam": "Iran"
   },
   {
@@ -31,8 +31,8 @@
     "MatchHour": "17",
     "MatchMinute": "00",
     "HomeTeam": "Qatar",
-    "HomeScore": "",
-    "AwayScore": "",
+    "HomeScore": "0",
+    "AwayScore": "2",
     "AwayTeam": "Ecuador"
   },
   {
@@ -43,9 +43,9 @@
     "MatchHour": "20",
     "MatchMinute": "00",
     "HomeTeam": "USA",
-    "HomeScore": "",
-    "AwayScore": "",
-    "AwayTeam": "Wales/Scotland/Ukraine"
+    "HomeScore": "1",
+    "AwayScore": "1",
+    "AwayTeam": "Wales"
   },
   {
     "ID": 4,
@@ -55,8 +55,8 @@
     "MatchHour": "11",
     "MatchMinute": "00",
     "HomeTeam": "Argentina",
-    "HomeScore": "",
-    "AwayScore": "",
+    "HomeScore": "1",
+    "AwayScore": "2",
     "AwayTeam": "Saudi Arabia"
   },
   {
@@ -67,8 +67,8 @@
     "MatchHour": "14",
     "MatchMinute": "00",
     "HomeTeam": "Denmark",
-    "HomeScore": "",
-    "AwayScore": "",
+    "HomeScore": "0",
+    "AwayScore": "0",
     "AwayTeam": "Tunisia"
   },
   {
@@ -79,8 +79,8 @@
     "MatchHour": "17",
     "MatchMinute": "00",
     "HomeTeam": "Mexico",
-    "HomeScore": "",
-    "AwayScore": "",
+    "HomeScore": "0",
+    "AwayScore": "0",
     "AwayTeam": "Poland"
   },
   {
@@ -91,9 +91,9 @@
     "MatchHour": "20",
     "MatchMinute": "00",
     "HomeTeam": "France",
-    "HomeScore": "",
-    "AwayScore": "",
-    "AwayTeam": "UAE/Australia/Peru"
+    "HomeScore": "4",
+    "AwayScore": "1",
+    "AwayTeam": "Australia"
   },
   {
     "ID": 8,
@@ -103,8 +103,8 @@
     "MatchHour": "11",
     "MatchMinute": "00",
     "HomeTeam": "Morocco",
-    "HomeScore": "",
-    "AwayScore": "",
+    "HomeScore": "0",
+    "AwayScore": "0",
     "AwayTeam": "Croatia"
   },
   {
@@ -115,8 +115,8 @@
     "MatchHour": "14",
     "MatchMinute": "00",
     "HomeTeam": "Germany",
-    "HomeScore": "",
-    "AwayScore": "",
+    "HomeScore": "1",
+    "AwayScore": "2",
     "AwayTeam": "Japan"
   },
   {
@@ -127,9 +127,9 @@
     "MatchHour": "17",
     "MatchMinute": "00",
     "HomeTeam": "Spain",
-    "HomeScore": "",
-    "AwayScore": "",
-    "AwayTeam": "Costa Rica/New Zealand"
+    "HomeScore": "7",
+    "AwayScore": "0",
+    "AwayTeam": "Costa Rica"
   },
   {
     "ID": 11,
@@ -139,8 +139,8 @@
     "MatchHour": "20",
     "MatchMinute": "00",
     "HomeTeam": "Belgium",
-    "HomeScore": "",
-    "AwayScore": "",
+    "HomeScore": "1",
+    "AwayScore": "0",
     "AwayTeam": "Canada"
   },
   {
@@ -151,8 +151,8 @@
     "MatchHour": "11",
     "MatchMinute": "00",
     "HomeTeam": "Schwitzerland",
-    "HomeScore": "",
-    "AwayScore": "",
+    "HomeScore": "1",
+    "AwayScore": "0",
     "AwayTeam": "Cameroun"
   },
   {
@@ -163,8 +163,8 @@
     "MatchHour": "14",
     "MatchMinute": "00",
     "HomeTeam": "Uruguay",
-    "HomeScore": "",
-    "AwayScore": "",
+    "HomeScore": "0",
+    "AwayScore": "0",
     "AwayTeam": "South Korea"
   },
   {
@@ -175,8 +175,8 @@
     "MatchHour": "17",
     "MatchMinute": "00",
     "HomeTeam": "Portugal",
-    "HomeScore": "",
-    "AwayScore": "",
+    "HomeScore": "3",
+    "AwayScore": "2",
     "AwayTeam": "Ghana"
   },
   {
@@ -187,8 +187,8 @@
     "MatchHour": "20",
     "MatchMinute": "00",
     "HomeTeam": "Brazil",
-    "HomeScore": "",
-    "AwayScore": "",
+    "HomeScore": "2",
+    "AwayScore": "0",
     "AwayTeam": "Serbia"
   },
   {
@@ -198,9 +198,9 @@
     "MatchYear": "2022",
     "MatchHour": "11",
     "MatchMinute": "00",
-    "HomeTeam": "Wales/Scotland/Ukraine",
-    "HomeScore": "",
-    "AwayScore": "",
+    "HomeTeam": "Wales",
+    "HomeScore": "0",
+    "AwayScore": "2",
     "AwayTeam": "Iran"
   },
   {
@@ -211,8 +211,8 @@
     "MatchHour": "14",
     "MatchMinute": "00",
     "HomeTeam": "Qatar",
-    "HomeScore": "",
-    "AwayScore": "",
+    "HomeScore": "1",
+    "AwayScore": "3",
     "AwayTeam": "Senegal"
   },
   {
@@ -223,8 +223,8 @@
     "MatchHour": "17",
     "MatchMinute": "00",
     "HomeTeam": "Holland",
-    "HomeScore": "",
-    "AwayScore": "",
+    "HomeScore": "1",
+    "AwayScore": "1",
     "AwayTeam": "Ecuador"
   },
   {
@@ -235,8 +235,8 @@
     "MatchHour": "20",
     "MatchMinute": "00",
     "HomeTeam": "England",
-    "HomeScore": "",
-    "AwayScore": "",
+    "HomeScore": "0",
+    "AwayScore": "0",
     "AwayTeam": "USA"
   },
   {
@@ -247,9 +247,9 @@
     "MatchHour": "11",
     "MatchMinute": "00",
     "HomeTeam": "Tunisia",
-    "HomeScore": "",
-    "AwayScore": "",
-    "AwayTeam": "UAE/Australia/Peru"
+    "HomeScore": "0",
+    "AwayScore": "1",
+    "AwayTeam": "Australia"
   },
   {
     "ID": 21,
@@ -259,8 +259,8 @@
     "MatchHour": "14",
     "MatchMinute": "00",
     "HomeTeam": "Poland",
-    "HomeScore": "",
-    "AwayScore": "",
+    "HomeScore": "2",
+    "AwayScore": "0",
     "AwayTeam": "Saudi Arabia"
   },
   {
@@ -297,7 +297,7 @@
     "HomeTeam": "Japan",
     "HomeScore": "",
     "AwayScore": "",
-    "AwayTeam": "Costa Rica/New Zealand"
+    "AwayTeam": "Costa Rica"
   },
   {
     "ID": 25,
@@ -426,7 +426,7 @@
     "MatchYear": "2022",
     "MatchHour": "20",
     "MatchMinute": "00",
-    "HomeTeam": "Wales/Scotland/Ukraine",
+    "HomeTeam": "Wales",
     "HomeScore": "",
     "AwayScore": "",
     "AwayTeam": "England"
@@ -450,7 +450,7 @@
     "MatchYear": "2022",
     "MatchHour": "16",
     "MatchMinute": "00",
-    "HomeTeam": "UAE/Australia/Peru",
+    "HomeTeam": "Australia",
     "HomeScore": "",
     "AwayScore": "",
     "AwayTeam": "Denmark"
@@ -510,7 +510,7 @@
     "MatchYear": "2022",
     "MatchHour": "20",
     "MatchMinute": "00",
-    "HomeTeam": "Costa Rica/New Zealand",
+    "HomeTeam": "Costa Rica",
     "HomeScore": "",
     "AwayScore": "",
     "AwayTeam": "Germany"

@@ -8,9 +8,9 @@ namespace Scores.Models
         public List<Team> LeagueTable { get; set; }
         public League(List<Match> matches)
         {
-            Team test = new Team();
             LeagueTable = new List<Team>();
             List<string> teamNames = matches.Select(m => m.HomeTeam).Distinct().ToList();
+
             for (int i = 0; i < teamNames.Count; i++)
             {
                 int w = matches.Where(m => m.HomeTeam == teamNames[i] && m.MatchResult == 1).ToList().Count + 
